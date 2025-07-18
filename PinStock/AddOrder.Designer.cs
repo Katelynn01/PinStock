@@ -115,7 +115,6 @@ namespace PinStock
             txtCustId.ReadOnly = true;
             txtCustId.Size = new Size(250, 27);
             txtCustId.TabIndex = 19;
-            
             // 
             // cIdlbl
             // 
@@ -195,7 +194,7 @@ namespace PinStock
             backBtn.TabIndex = 28;
             backBtn.Text = "Back";
             backBtn.UseVisualStyleBackColor = true;
-            backBtn.Click += this.backBtn_Click;
+            backBtn.Click += backBtn_Click;
             // 
             // productlistlbl
             // 
@@ -262,6 +261,7 @@ namespace PinStock
             Controls.Add(orderlbl);
             Controls.Add(logo);
             Name = "AddOrder";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Order Dashboard";
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgProductList).EndInit();

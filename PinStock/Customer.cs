@@ -22,11 +22,30 @@ namespace PinStock
 
         }
 
-        private void backButton_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
             Home obj = new Home();
             obj.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            AddCustomer obj = new AddCustomer();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void Addbtn_Click(object sender, EventArgs e)
+        {
+            AddCustomer obj = new AddCustomer();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Are you sure you want to delete this customer?", "Confirm Deletion",MessageBoxButtons.YesNo);
         }
     }
 }

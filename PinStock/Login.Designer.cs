@@ -95,13 +95,14 @@ namespace PinStock
             txtpassword.Size = new Size(270, 27);
             txtpassword.TabIndex = 5;
             txtpassword.UseSystemPasswordChar = true;
+            txtpassword.TextChanged += txtpassword_TextChanged;
             // 
-            // button1
+            // LoginBtn
             // 
             LoginBtn.Location = new Point(318, 315);
             LoginBtn.Name = "LoginBtn";
             LoginBtn.Size = new Size(122, 40);
-            LoginBtn.TabIndex = 6;
+            LoginBtn.TabIndex = 7;
             LoginBtn.Text = "Log In";
             LoginBtn.UseVisualStyleBackColor = true;
             LoginBtn.Click += LogInButton_Click;
@@ -112,7 +113,7 @@ namespace PinStock
             checkBox1.Location = new Point(520, 256);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(18, 17);
-            checkBox1.TabIndex = 7;
+            checkBox1.TabIndex = 6;
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 

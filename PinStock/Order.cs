@@ -22,19 +22,30 @@ namespace PinStock
 
         }
 
-        private void aoBtn_Click(object sender, EventArgs e)
-        {
-
-            AddOrder obj = new AddOrder();
-            obj.Show();
-            this.Hide();
-        }
-
         private void backBtn_Click(object sender, EventArgs e)
         {
             Home obj = new Home();
             obj.Show();
             this.Hide();
+        }
+
+        private void Addbtn_Click(object sender, EventArgs e)
+        {
+            AddOrder obj = new AddOrder();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            AddOrder obj = new AddOrder();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Are you sure you want to delete this order?","Confirm deletion", MessageBoxButtons.YesNo);
         }
     }
 }

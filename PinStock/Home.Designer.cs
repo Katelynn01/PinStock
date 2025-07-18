@@ -39,10 +39,13 @@ namespace PinStock
             orderBtn = new Button();
             customerBtn = new Button();
             logoutBtn = new Button();
+            pictureBox1 = new PictureBox();
+            archiveBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productlogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)orderlogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)customerlogo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // logo
@@ -68,7 +71,7 @@ namespace PinStock
             // productlogo
             // 
             productlogo.Image = (Image)resources.GetObject("productlogo.Image");
-            productlogo.Location = new Point(96, 197);
+            productlogo.Location = new Point(84, 197);
             productlogo.Name = "productlogo";
             productlogo.Size = new Size(126, 148);
             productlogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -78,9 +81,9 @@ namespace PinStock
             // orderlogo
             // 
             orderlogo.Image = (Image)resources.GetObject("orderlogo.Image");
-            orderlogo.Location = new Point(339, 197);
+            orderlogo.Location = new Point(261, 197);
             orderlogo.Name = "orderlogo";
-            orderlogo.Size = new Size(123, 148);
+            orderlogo.Size = new Size(126, 148);
             orderlogo.SizeMode = PictureBoxSizeMode.Zoom;
             orderlogo.TabIndex = 4;
             orderlogo.TabStop = false;
@@ -88,9 +91,9 @@ namespace PinStock
             // customerlogo
             // 
             customerlogo.Image = (Image)resources.GetObject("customerlogo.Image");
-            customerlogo.Location = new Point(585, 197);
+            customerlogo.Location = new Point(438, 197);
             customerlogo.Name = "customerlogo";
-            customerlogo.Size = new Size(111, 124);
+            customerlogo.Size = new Size(111, 129);
             customerlogo.SizeMode = PictureBoxSizeMode.StretchImage;
             customerlogo.TabIndex = 5;
             customerlogo.TabStop = false;
@@ -98,10 +101,10 @@ namespace PinStock
             // productBtn
             // 
             productBtn.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            productBtn.Location = new Point(97, 332);
+            productBtn.Location = new Point(85, 332);
             productBtn.Name = "productBtn";
             productBtn.Size = new Size(125, 30);
-            productBtn.TabIndex = 6;
+            productBtn.TabIndex = 8;
             productBtn.Text = "Product";
             productBtn.UseVisualStyleBackColor = true;
             productBtn.Click += productButton_Click;
@@ -109,10 +112,10 @@ namespace PinStock
             // orderBtn
             // 
             orderBtn.Font = new Font("Impact", 12F);
-            orderBtn.Location = new Point(337, 332);
+            orderBtn.Location = new Point(262, 332);
             orderBtn.Name = "orderBtn";
             orderBtn.Size = new Size(125, 30);
-            orderBtn.TabIndex = 8;
+            orderBtn.TabIndex = 9;
             orderBtn.Text = "Order";
             orderBtn.UseVisualStyleBackColor = true;
             orderBtn.Click += orderButton_Click;
@@ -120,10 +123,10 @@ namespace PinStock
             // customerBtn
             // 
             customerBtn.Font = new Font("Impact", 12F);
-            customerBtn.Location = new Point(579, 332);
+            customerBtn.Location = new Point(431, 332);
             customerBtn.Name = "customerBtn";
             customerBtn.Size = new Size(125, 30);
-            customerBtn.TabIndex = 9;
+            customerBtn.TabIndex = 10;
             customerBtn.Text = "Customer";
             customerBtn.UseVisualStyleBackColor = true;
             customerBtn.Click += customerBtn_Click;
@@ -134,10 +137,31 @@ namespace PinStock
             logoutBtn.Location = new Point(701, 414);
             logoutBtn.Name = "logoutBtn";
             logoutBtn.Size = new Size(90, 30);
-            logoutBtn.TabIndex = 10;
+            logoutBtn.TabIndex = 12;
             logoutBtn.Text = "Logout";
             logoutBtn.UseVisualStyleBackColor = true;
             logoutBtn.Click += logoutBtn_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(609, 195);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(111, 150);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
+            // archiveBtn
+            // 
+            archiveBtn.Font = new Font("Impact", 12F);
+            archiveBtn.Location = new Point(603, 332);
+            archiveBtn.Name = "archiveBtn";
+            archiveBtn.Size = new Size(125, 30);
+            archiveBtn.TabIndex = 11;
+            archiveBtn.Text = "Archive";
+            archiveBtn.UseVisualStyleBackColor = true;
+            archiveBtn.Click += archiveBtn_Click;
             // 
             // Home
             // 
@@ -145,6 +169,8 @@ namespace PinStock
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
+            Controls.Add(archiveBtn);
+            Controls.Add(pictureBox1);
             Controls.Add(logoutBtn);
             Controls.Add(customerBtn);
             Controls.Add(orderBtn);
@@ -156,11 +182,12 @@ namespace PinStock
             Controls.Add(logo);
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Home Dashboard";
+            Text = " ";
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)productlogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)orderlogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)customerlogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,5 +213,7 @@ namespace PinStock
         private Button orderBtn;
         private Button customerBtn;
         private Button logoutBtn;
+        private PictureBox pictureBox1;
+        private Button archiveBtn;
     }
 }

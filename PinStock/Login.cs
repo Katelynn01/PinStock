@@ -58,8 +58,13 @@ namespace PinStock
             }
         }
 
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // Renamed the duplicate method to resolve CS0111
-        
+
     }
 }
 

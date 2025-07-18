@@ -47,6 +47,12 @@ namespace PinStock
             this.Hide();
         }
 
-        
+        private void archiveBtn_Click(object sender, EventArgs e)
+        {
+            
+            Verify obj = new Verify();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

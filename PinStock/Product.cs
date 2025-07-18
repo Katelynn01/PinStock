@@ -87,5 +87,10 @@ namespace PinStock
             this.Hide();
 
         }
+
+        private void deleteBtn_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Are you sure you want to delete this product?", "Confirm deletion", MessageBoxButtons.YesNo );
+        }
     }
 }

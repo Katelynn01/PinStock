@@ -33,10 +33,12 @@
             textBox1 = new TextBox();
             comboBox1 = new ComboBox();
             searchBtn = new Button();
-            aoBtn = new Button();
             logo = new PictureBox();
             productlbl = new Label();
             backBtn = new Button();
+            deleteBtn = new Button();
+            updateBtn = new Button();
+            Addbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dgOrder).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
@@ -46,7 +48,7 @@
             dgOrder.BackgroundColor = Color.LavenderBlush;
             dgOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgOrder.GridColor = Color.Lavender;
-            dgOrder.Location = new Point(63, 177);
+            dgOrder.Location = new Point(66, 149);
             dgOrder.Name = "dgOrder";
             dgOrder.RowHeadersWidth = 51;
             dgOrder.Size = new Size(678, 196);
@@ -68,7 +70,7 @@
             comboBox1.Location = new Point(649, 101);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(139, 28);
-            comboBox1.TabIndex = 17;
+            comboBox1.TabIndex = 18;
             comboBox1.Text = "Filter by Status";
             // 
             // searchBtn
@@ -76,20 +78,10 @@
             searchBtn.Location = new Point(566, 104);
             searchBtn.Name = "searchBtn";
             searchBtn.Size = new Size(70, 27);
-            searchBtn.TabIndex = 18;
+            searchBtn.TabIndex = 17;
             searchBtn.Text = "Search";
             searchBtn.UseVisualStyleBackColor = true;
             searchBtn.Click += searchBtn_Click;
-            // 
-            // aoBtn
-            // 
-            aoBtn.Location = new Point(658, 35);
-            aoBtn.Name = "aoBtn";
-            aoBtn.Size = new Size(107, 27);
-            aoBtn.TabIndex = 19;
-            aoBtn.Text = "Add Order";
-            aoBtn.UseVisualStyleBackColor = true;
-            aoBtn.Click += aoBtn_Click;
             // 
             // logo
             // 
@@ -116,10 +108,40 @@
             backBtn.Location = new Point(699, 411);
             backBtn.Name = "backBtn";
             backBtn.Size = new Size(91, 27);
-            backBtn.TabIndex = 29;
+            backBtn.TabIndex = 22;
             backBtn.Text = "Back";
             backBtn.UseVisualStyleBackColor = true;
             backBtn.Click += backBtn_Click;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.Location = new Point(692, 360);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(81, 30);
+            deleteBtn.TabIndex = 21;
+            deleteBtn.Text = "Delete";
+            deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
+            // 
+            // updateBtn
+            // 
+            updateBtn.Location = new Point(592, 360);
+            updateBtn.Name = "updateBtn";
+            updateBtn.Size = new Size(81, 30);
+            updateBtn.TabIndex = 20;
+            updateBtn.Text = "Update";
+            updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.Click += updateBtn_Click;
+            // 
+            // Addbtn
+            // 
+            Addbtn.Location = new Point(492, 360);
+            Addbtn.Name = "Addbtn";
+            Addbtn.Size = new Size(81, 30);
+            Addbtn.TabIndex = 19;
+            Addbtn.Text = "Add";
+            Addbtn.UseVisualStyleBackColor = true;
+            Addbtn.Click += Addbtn_Click;
             // 
             // Order
             // 
@@ -127,8 +149,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
+            Controls.Add(deleteBtn);
+            Controls.Add(updateBtn);
+            Controls.Add(Addbtn);
             Controls.Add(backBtn);
-            Controls.Add(aoBtn);
             Controls.Add(searchBtn);
             Controls.Add(comboBox1);
             Controls.Add(textBox1);
@@ -149,9 +173,11 @@
         private TextBox textBox1;
         private ComboBox comboBox1;
         private Button searchBtn;
-        private Button aoBtn;
         private PictureBox logo;
         private Label productlbl;
         private Button backBtn;
+        private Button deleteBtn;
+        private Button updateBtn;
+        private Button Addbtn;
     }
 }

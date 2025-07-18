@@ -37,6 +37,9 @@ namespace PinStock
             txtsearch = new TextBox();
             searchBtn = new Button();
             filterCBox = new ComboBox();
+            deleteBtn = new Button();
+            updateBtn = new Button();
+            Addbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
@@ -49,7 +52,7 @@ namespace PinStock
             dataGridView1.Location = new Point(36, 132);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(730, 256);
+            dataGridView1.Size = new Size(730, 220);
             dataGridView1.TabIndex = 0;
             // 
             // backBtn
@@ -57,7 +60,7 @@ namespace PinStock
             backBtn.Location = new Point(697, 411);
             backBtn.Name = "backBtn";
             backBtn.Size = new Size(91, 27);
-            backBtn.TabIndex = 24;
+            backBtn.TabIndex = 39;
             backBtn.Text = "Back";
             backBtn.UseVisualStyleBackColor = true;
             backBtn.Click += backBtn_Click;
@@ -84,19 +87,19 @@ namespace PinStock
             // 
             // txtsearch
             // 
-            txtsearch.Location = new Point(427, 47);
+            txtsearch.Location = new Point(12, 86);
             txtsearch.Name = "txtsearch";
             txtsearch.PlaceholderText = "Search Product  ";
-            txtsearch.Size = new Size(250, 27);
-            txtsearch.TabIndex = 34;
+            txtsearch.Size = new Size(207, 27);
+            txtsearch.TabIndex = 33;
             txtsearch.TextAlign = HorizontalAlignment.Right;
             // 
             // searchBtn
             // 
-            searchBtn.Location = new Point(683, 44);
+            searchBtn.Location = new Point(225, 86);
             searchBtn.Name = "searchBtn";
             searchBtn.Size = new Size(75, 29);
-            searchBtn.TabIndex = 33;
+            searchBtn.TabIndex = 34;
             searchBtn.Text = "Search";
             searchBtn.UseVisualStyleBackColor = true;
             // 
@@ -105,11 +108,41 @@ namespace PinStock
             filterCBox.ForeColor = Color.Gray;
             filterCBox.FormattingEnabled = true;
             filterCBox.Items.AddRange(new object[] { "Shipped", "Order Completed", "Pending Order", "Canceled" });
-            filterCBox.Location = new Point(598, 83);
+            filterCBox.Location = new Point(316, 85);
             filterCBox.Name = "filterCBox";
-            filterCBox.Size = new Size(160, 28);
+            filterCBox.Size = new Size(126, 28);
             filterCBox.TabIndex = 35;
             filterCBox.Text = "Filter by Status";
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.Location = new Point(702, 367);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(81, 30);
+            deleteBtn.TabIndex = 38;
+            deleteBtn.Text = "Delete";
+            deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
+            // 
+            // updateBtn
+            // 
+            updateBtn.Location = new Point(602, 367);
+            updateBtn.Name = "updateBtn";
+            updateBtn.Size = new Size(81, 30);
+            updateBtn.TabIndex = 37;
+            updateBtn.Text = "Update";
+            updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.Click += updateBtn_Click;
+            // 
+            // Addbtn
+            // 
+            Addbtn.Location = new Point(502, 367);
+            Addbtn.Name = "Addbtn";
+            Addbtn.Size = new Size(81, 30);
+            Addbtn.TabIndex = 36;
+            Addbtn.Text = "Add";
+            Addbtn.UseVisualStyleBackColor = true;
+            Addbtn.Click += Addbtn_Click;
             // 
             // Customer
             // 
@@ -117,6 +150,9 @@ namespace PinStock
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
+            Controls.Add(deleteBtn);
+            Controls.Add(updateBtn);
+            Controls.Add(Addbtn);
             Controls.Add(filterCBox);
             Controls.Add(txtsearch);
             Controls.Add(searchBtn);
@@ -142,6 +178,8 @@ namespace PinStock
         private TextBox txtsearch;
         private Button searchBtn;
         private ComboBox filterCBox;
-        private EventHandler backBtn_Click;
+        private Button deleteBtn;
+        private Button updateBtn;
+        private Button Addbtn;
     }
 }

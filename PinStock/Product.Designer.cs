@@ -48,11 +48,10 @@ namespace PinStock
             txtQuantity = new TextBox();
             txrPrice = new TextBox();
             StatCBox = new ComboBox();
-            label1 = new Label();
+            plistlbl = new Label();
             Addbtn = new Button();
             updateBtn = new Button();
             deleteBtn = new Button();
-            archiveBtn = new Button();
             backBtn = new Button();
             dgProductList = new DataGridView();
             searchlbl = new Label();
@@ -150,7 +149,7 @@ namespace PinStock
             txtPId.Name = "txtPId";
             txtPId.ReadOnly = true;
             txtPId.Size = new Size(250, 27);
-            txtPId.TabIndex = 11;
+            txtPId.TabIndex = 12;
             // 
             // txtPName
             // 
@@ -158,7 +157,7 @@ namespace PinStock
             txtPName.Name = "txtPName";
             txtPName.PlaceholderText = "Enter Product Name";
             txtPName.Size = new Size(250, 27);
-            txtPName.TabIndex = 12;
+            txtPName.TabIndex = 13;
             // 
             // txtBrand
             // 
@@ -166,7 +165,7 @@ namespace PinStock
             txtBrand.Name = "txtBrand";
             txtBrand.PlaceholderText = "Enter Brand";
             txtBrand.Size = new Size(250, 27);
-            txtBrand.TabIndex = 13;
+            txtBrand.TabIndex = 15;
             // 
             // catCBox
             // 
@@ -184,7 +183,7 @@ namespace PinStock
             txtQuantity.Name = "txtQuantity";
             txtQuantity.PlaceholderText = "Enter Quantity";
             txtQuantity.Size = new Size(250, 27);
-            txtQuantity.TabIndex = 15;
+            txtQuantity.TabIndex = 16;
             // 
             // txrPrice
             // 
@@ -192,7 +191,7 @@ namespace PinStock
             txrPrice.Name = "txrPrice";
             txrPrice.PlaceholderText = "Enter Price";
             txrPrice.Size = new Size(250, 27);
-            txrPrice.TabIndex = 16;
+            txrPrice.TabIndex = 17;
             // 
             // StatCBox
             // 
@@ -202,21 +201,21 @@ namespace PinStock
             StatCBox.Location = new Point(152, 350);
             StatCBox.Name = "StatCBox";
             StatCBox.Size = new Size(250, 28);
-            StatCBox.TabIndex = 17;
+            StatCBox.TabIndex = 18;
             StatCBox.Text = "Enter Status";
             // 
-            // label1
+            // plistlbl
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(568, 73);
-            label1.Name = "label1";
-            label1.Size = new Size(79, 20);
-            label1.TabIndex = 18;
-            label1.Text = "Product ID";
+            plistlbl.AutoSize = true;
+            plistlbl.Location = new Point(568, 73);
+            plistlbl.Name = "plistlbl";
+            plistlbl.Size = new Size(86, 20);
+            plistlbl.TabIndex = 18;
+            plistlbl.Text = "Product List";
             // 
             // Addbtn
             // 
-            Addbtn.Location = new Point(100, 408);
+            Addbtn.Location = new Point(135, 408);
             Addbtn.Name = "Addbtn";
             Addbtn.Size = new Size(81, 30);
             Addbtn.TabIndex = 19;
@@ -226,7 +225,7 @@ namespace PinStock
             // 
             // updateBtn
             // 
-            updateBtn.Location = new Point(200, 408);
+            updateBtn.Location = new Point(235, 408);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(81, 30);
             updateBtn.TabIndex = 20;
@@ -235,21 +234,13 @@ namespace PinStock
             // 
             // deleteBtn
             // 
-            deleteBtn.Location = new Point(300, 408);
+            deleteBtn.Location = new Point(335, 408);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(81, 30);
             deleteBtn.TabIndex = 21;
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
-            // 
-            // archiveBtn
-            // 
-            archiveBtn.Location = new Point(400, 408);
-            archiveBtn.Name = "archiveBtn";
-            archiveBtn.Size = new Size(81, 30);
-            archiveBtn.TabIndex = 22;
-            archiveBtn.Text = " Archive";
-            archiveBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click_1;
             // 
             // backBtn
             // 
@@ -288,7 +279,7 @@ namespace PinStock
             txtsearch.Name = "txtsearch";
             txtsearch.PlaceholderText = "Search Product";
             txtsearch.Size = new Size(224, 27);
-            txtsearch.TabIndex = 25;
+            txtsearch.TabIndex = 11;
             // 
             // Product
             // 
@@ -300,11 +291,10 @@ namespace PinStock
             Controls.Add(txtsearch);
             Controls.Add(searchlbl);
             Controls.Add(backBtn);
-            Controls.Add(archiveBtn);
             Controls.Add(deleteBtn);
             Controls.Add(updateBtn);
             Controls.Add(Addbtn);
-            Controls.Add(label1);
+            Controls.Add(plistlbl);
             Controls.Add(StatCBox);
             Controls.Add(txrPrice);
             Controls.Add(txtQuantity);
@@ -351,11 +341,10 @@ namespace PinStock
         private TextBox txtQuantity;
         private TextBox txrPrice;
         private ComboBox StatCBox;
-        private Label label1;
+        private Label plistlbl;
         private Button Addbtn;
         private Button updateBtn;
         private Button deleteBtn;
-        private Button archiveBtn;
         private Button backBtn;
         private DataGridView dgProductList;
         private Label searchlbl;
