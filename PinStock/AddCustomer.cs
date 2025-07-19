@@ -16,5 +16,13 @@ namespace PinStock
         {
             InitializeComponent();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Customer obj = new Customer();
+            obj.Show();
+            this.Hide();
+
+        }
     }
 }

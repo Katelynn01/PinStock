@@ -41,6 +41,7 @@
             cNamelbl = new Label();
             updateBtn = new Button();
             Addbtn = new Button();
+            backBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
             // 
@@ -150,12 +151,23 @@
             Addbtn.Text = "Add";
             Addbtn.UseVisualStyleBackColor = true;
             // 
+            // backBtn
+            // 
+            backBtn.Location = new Point(264, 408);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(81, 30);
+            backBtn.TabIndex = 41;
+            backBtn.Text = "Back\r\n";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Click += backBtn_Click;
+            // 
             // AddCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(357, 450);
+            Controls.Add(backBtn);
             Controls.Add(updateBtn);
             Controls.Add(Addbtn);
             Controls.Add(txtaddress);
@@ -190,5 +202,6 @@
         private Label cNamelbl;
         private Button updateBtn;
         private Button Addbtn;
+        private Button backBtn;
     }
 }
