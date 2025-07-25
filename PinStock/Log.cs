@@ -10,23 +10,17 @@ using System.Windows.Forms;
 
 namespace PinStock
 {
-    public partial class Archive : Form
+    public partial class Log : Form
     {
-        public Archive()
+        public Log()
         {
             InitializeComponent();
         }
+    
 
-        private void backBtn_Click(object sender, EventArgs e)
+    private void backBtn_Click(object sender, EventArgs e)
         {
-            Home obj = new Home();
-            obj.Show();
-            this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Log obj = new Log();
+            Archive obj = new Archive();
             obj.Show();
             this.Hide();
         }

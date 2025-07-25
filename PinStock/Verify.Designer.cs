@@ -122,7 +122,7 @@
             backBtn.TabIndex = 8;
             backBtn.Text = "Back";
             backBtn.UseVisualStyleBackColor = true;
-            backBtn.Click += this.backBtn_Click;
+            backBtn.Click += backBtn_Click;
             // 
             // Verify
             // 
@@ -139,6 +139,7 @@
             Controls.Add(txtpass);
             Controls.Add(passlbl);
             Controls.Add(label1);
+            MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             Name = "Verify";
             StartPosition = FormStartPosition.CenterScreen;

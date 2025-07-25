@@ -75,7 +75,6 @@ namespace PinStock
             Home obj = new Home();
             obj.Show();
             this.Hide();
-
         }
     }
 }

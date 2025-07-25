@@ -1,5 +1,4 @@
-﻿
-namespace PinStock
+﻿namespace PinStock
 {
     partial class Product
     {
@@ -19,9 +18,7 @@ namespace PinStock
                 components.Dispose();
             }
             base.Dispose(disposing);
-
         }
-
 
         #region Windows Form Designer generated code
 
@@ -32,33 +29,88 @@ namespace PinStock
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
-            logo = new PictureBox();
-            productlbl = new Label();
-            pIdlbl = new Label();
-            PNamelbl = new Label();
-            catlbl = new Label();
-            brandlbl = new Label();
-            Quantitylbl = new Label();
-            Pricelbl = new Label();
-            Statuslbl = new Label();
-            txtPId = new TextBox();
-            txtPName = new TextBox();
-            txtBrand = new TextBox();
-            catCBox = new ComboBox();
-            txtQuantity = new TextBox();
-            txrPrice = new TextBox();
-            StatCBox = new ComboBox();
-            plistlbl = new Label();
-            Addbtn = new Button();
-            updateBtn = new Button();
             deleteBtn = new Button();
-            backBtn = new Button();
-            dgProductList = new DataGridView();
-            searchlbl = new Label();
+            updateBtn = new Button();
+            Addbtn = new Button();
+            filterCBox = new ComboBox();
             txtsearch = new TextBox();
+            searchBtn = new Button();
+            customerlbl = new Label();
+            logo = new PictureBox();
+            backBtn = new Button();
+            dgProductlist = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgProductList).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgProductlist).BeginInit();
             SuspendLayout();
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.Location = new Point(702, 367);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(81, 30);
+            deleteBtn.TabIndex = 48;
+            deleteBtn.Text = "Delete";
+            deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
+            // 
+            // updateBtn
+            // 
+            updateBtn.Location = new Point(602, 367);
+            updateBtn.Name = "updateBtn";
+            updateBtn.Size = new Size(81, 30);
+            updateBtn.TabIndex = 47;
+            updateBtn.Text = "Update";
+            updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.Click += updateBtn_Click;
+            // 
+            // Addbtn
+            // 
+            Addbtn.Location = new Point(502, 367);
+            Addbtn.Name = "Addbtn";
+            Addbtn.Size = new Size(81, 30);
+            Addbtn.TabIndex = 46;
+            Addbtn.Text = "Add";
+            Addbtn.UseVisualStyleBackColor = true;
+            Addbtn.Click += Addbtn_Click;
+            // 
+            // filterCBox
+            // 
+            filterCBox.ForeColor = Color.Gray;
+            filterCBox.FormattingEnabled = true;
+            filterCBox.Items.AddRange(new object[] { "Shipped", "Order Completed", "Pending Order", "Canceled" });
+            filterCBox.Location = new Point(658, 83);
+            filterCBox.Name = "filterCBox";
+            filterCBox.Size = new Size(108, 28);
+            filterCBox.TabIndex = 45;
+            filterCBox.Text = "Category";
+            // 
+            // txtsearch
+            // 
+            txtsearch.Location = new Point(354, 84);
+            txtsearch.Name = "txtsearch";
+            txtsearch.PlaceholderText = "Search Product  ";
+            txtsearch.Size = new Size(207, 27);
+            txtsearch.TabIndex = 43;
+            txtsearch.TextAlign = HorizontalAlignment.Right;
+            // 
+            // searchBtn
+            // 
+            searchBtn.Location = new Point(567, 84);
+            searchBtn.Name = "searchBtn";
+            searchBtn.Size = new Size(75, 29);
+            searchBtn.TabIndex = 44;
+            searchBtn.Text = "Search";
+            searchBtn.UseVisualStyleBackColor = true;
+            // 
+            // customerlbl
+            // 
+            customerlbl.AutoSize = true;
+            customerlbl.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            customerlbl.Location = new Point(87, 37);
+            customerlbl.Name = "customerlbl";
+            customerlbl.Size = new Size(166, 25);
+            customerlbl.TabIndex = 42;
+            customerlbl.Text = "Product Dashboard";
             // 
             // logo
             // 
@@ -67,287 +119,66 @@ namespace PinStock
             logo.Name = "logo";
             logo.Size = new Size(69, 62);
             logo.SizeMode = PictureBoxSizeMode.Zoom;
-            logo.TabIndex = 2;
+            logo.TabIndex = 41;
             logo.TabStop = false;
-            // 
-            // productlbl
-            // 
-            productlbl.AutoSize = true;
-            productlbl.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            productlbl.Location = new Point(87, 37);
-            productlbl.Name = "productlbl";
-            productlbl.Size = new Size(166, 25);
-            productlbl.TabIndex = 3;
-            productlbl.Text = "Product Dashboard";
-            // 
-            // pIdlbl
-            // 
-            pIdlbl.AutoSize = true;
-            pIdlbl.Location = new Point(30, 110);
-            pIdlbl.Name = "pIdlbl";
-            pIdlbl.Size = new Size(79, 20);
-            pIdlbl.TabIndex = 4;
-            pIdlbl.Text = "Product ID";
-            // 
-            // PNamelbl
-            // 
-            PNamelbl.AutoSize = true;
-            PNamelbl.Location = new Point(30, 150);
-            PNamelbl.Name = "PNamelbl";
-            PNamelbl.Size = new Size(104, 20);
-            PNamelbl.TabIndex = 5;
-            PNamelbl.Text = "Product Name";
-            // 
-            // catlbl
-            // 
-            catlbl.AutoSize = true;
-            catlbl.Location = new Point(30, 190);
-            catlbl.Name = "catlbl";
-            catlbl.Size = new Size(69, 20);
-            catlbl.TabIndex = 6;
-            catlbl.Text = "Category";
-            // 
-            // brandlbl
-            // 
-            brandlbl.AutoSize = true;
-            brandlbl.Location = new Point(30, 230);
-            brandlbl.Name = "brandlbl";
-            brandlbl.Size = new Size(48, 20);
-            brandlbl.TabIndex = 7;
-            brandlbl.Text = "Brand";
-            // 
-            // Quantitylbl
-            // 
-            Quantitylbl.AutoSize = true;
-            Quantitylbl.Location = new Point(30, 270);
-            Quantitylbl.Name = "Quantitylbl";
-            Quantitylbl.Size = new Size(65, 20);
-            Quantitylbl.TabIndex = 8;
-            Quantitylbl.Text = "Quantity";
-            // 
-            // Pricelbl
-            // 
-            Pricelbl.AutoSize = true;
-            Pricelbl.Location = new Point(30, 310);
-            Pricelbl.Name = "Pricelbl";
-            Pricelbl.Size = new Size(41, 20);
-            Pricelbl.TabIndex = 9;
-            Pricelbl.Text = "Price";
-            // 
-            // Statuslbl
-            // 
-            Statuslbl.AutoSize = true;
-            Statuslbl.Location = new Point(30, 350);
-            Statuslbl.Name = "Statuslbl";
-            Statuslbl.Size = new Size(49, 20);
-            Statuslbl.TabIndex = 10;
-            Statuslbl.Text = "Status";
-            // 
-            // txtPId
-            // 
-            txtPId.Location = new Point(152, 110);
-            txtPId.Name = "txtPId";
-            txtPId.ReadOnly = true;
-            txtPId.Size = new Size(250, 27);
-            txtPId.TabIndex = 12;
-            // 
-            // txtPName
-            // 
-            txtPName.Location = new Point(152, 150);
-            txtPName.Name = "txtPName";
-            txtPName.PlaceholderText = "Enter Product Name";
-            txtPName.Size = new Size(250, 27);
-            txtPName.TabIndex = 13;
-            // 
-            // txtBrand
-            // 
-            txtBrand.Location = new Point(152, 230);
-            txtBrand.Name = "txtBrand";
-            txtBrand.PlaceholderText = "Enter Brand";
-            txtBrand.Size = new Size(250, 27);
-            txtBrand.TabIndex = 15;
-            // 
-            // catCBox
-            // 
-            catCBox.ForeColor = SystemColors.GrayText;
-            catCBox.FormattingEnabled = true;
-            catCBox.Location = new Point(152, 190);
-            catCBox.Name = "catCBox";
-            catCBox.Size = new Size(250, 28);
-            catCBox.TabIndex = 14;
-            catCBox.Text = "Enter Category";
-            // 
-            // txtQuantity
-            // 
-            txtQuantity.Location = new Point(152, 270);
-            txtQuantity.Name = "txtQuantity";
-            txtQuantity.PlaceholderText = "Enter Quantity";
-            txtQuantity.Size = new Size(250, 27);
-            txtQuantity.TabIndex = 16;
-            // 
-            // txrPrice
-            // 
-            txrPrice.Location = new Point(152, 310);
-            txrPrice.Name = "txrPrice";
-            txrPrice.PlaceholderText = "Enter Price";
-            txrPrice.Size = new Size(250, 27);
-            txrPrice.TabIndex = 17;
-            // 
-            // StatCBox
-            // 
-            StatCBox.ForeColor = SystemColors.GrayText;
-            StatCBox.FormattingEnabled = true;
-            StatCBox.Items.AddRange(new object[] { "Available", "Low Stock", "Unavailable" });
-            StatCBox.Location = new Point(152, 350);
-            StatCBox.Name = "StatCBox";
-            StatCBox.Size = new Size(250, 28);
-            StatCBox.TabIndex = 18;
-            StatCBox.Text = "Enter Status";
-            // 
-            // plistlbl
-            // 
-            plistlbl.AutoSize = true;
-            plistlbl.Location = new Point(568, 73);
-            plistlbl.Name = "plistlbl";
-            plistlbl.Size = new Size(86, 20);
-            plistlbl.TabIndex = 18;
-            plistlbl.Text = "Product List";
-            // 
-            // Addbtn
-            // 
-            Addbtn.Location = new Point(135, 408);
-            Addbtn.Name = "Addbtn";
-            Addbtn.Size = new Size(81, 30);
-            Addbtn.TabIndex = 19;
-            Addbtn.Text = "Add";
-            Addbtn.UseVisualStyleBackColor = true;
-            Addbtn.Click += Addbtn_Click;
-            // 
-            // updateBtn
-            // 
-            updateBtn.Location = new Point(235, 408);
-            updateBtn.Name = "updateBtn";
-            updateBtn.Size = new Size(81, 30);
-            updateBtn.TabIndex = 20;
-            updateBtn.Text = "Update";
-            updateBtn.UseVisualStyleBackColor = true;
-            // 
-            // deleteBtn
-            // 
-            deleteBtn.Location = new Point(335, 408);
-            deleteBtn.Name = "deleteBtn";
-            deleteBtn.Size = new Size(81, 30);
-            deleteBtn.TabIndex = 21;
-            deleteBtn.Text = "Delete";
-            deleteBtn.UseVisualStyleBackColor = true;
-            deleteBtn.Click += deleteBtn_Click_1;
             // 
             // backBtn
             // 
             backBtn.Location = new Point(697, 411);
             backBtn.Name = "backBtn";
             backBtn.Size = new Size(91, 27);
-            backBtn.TabIndex = 23;
+            backBtn.TabIndex = 49;
             backBtn.Text = "Back";
             backBtn.UseVisualStyleBackColor = true;
-            backBtn.Click += backBtn_Click_1;
+            backBtn.Click += backBtn_Click;
             // 
-            // dgProductList
+            // dgProductlist
             // 
-            dgProductList.BackgroundColor = Color.LavenderBlush;
-            dgProductList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgProductList.GridColor = Color.Lavender;
-            dgProductList.Location = new Point(479, 98);
-            dgProductList.Name = "dgProductList";
-            dgProductList.RowHeadersWidth = 51;
-            dgProductList.Size = new Size(264, 310);
-            dgProductList.TabIndex = 26;
-            // 
-            // searchlbl
-            // 
-            searchlbl.AutoSize = true;
-            searchlbl.Font = new Font("Segoe UI", 10F);
-            searchlbl.Location = new Point(436, 40);
-            searchlbl.Name = "searchlbl";
-            searchlbl.Size = new Size(70, 23);
-            searchlbl.TabIndex = 24;
-            searchlbl.Text = "Search: ";
-            // 
-            // txtsearch
-            // 
-            txtsearch.Location = new Point(501, 36);
-            txtsearch.Name = "txtsearch";
-            txtsearch.PlaceholderText = "Search Product";
-            txtsearch.Size = new Size(224, 27);
-            txtsearch.TabIndex = 11;
+            dgProductlist.BackgroundColor = Color.LavenderBlush;
+            dgProductlist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgProductlist.GridColor = Color.Lavender;
+            dgProductlist.Location = new Point(36, 132);
+            dgProductlist.Name = "dgProductlist";
+            dgProductlist.RowHeadersWidth = 51;
+            dgProductlist.Size = new Size(730, 220);
+            dgProductlist.TabIndex = 40;
             // 
             // Product
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
-            ClientSize = new Size(797, 453);
-            Controls.Add(dgProductList);
-            Controls.Add(txtsearch);
-            Controls.Add(searchlbl);
-            Controls.Add(backBtn);
+            ClientSize = new Size(800, 450);
             Controls.Add(deleteBtn);
             Controls.Add(updateBtn);
             Controls.Add(Addbtn);
-            Controls.Add(plistlbl);
-            Controls.Add(StatCBox);
-            Controls.Add(txrPrice);
-            Controls.Add(txtQuantity);
-            Controls.Add(catCBox);
-            Controls.Add(txtBrand);
-            Controls.Add(txtPName);
-            Controls.Add(txtPId);
-            Controls.Add(Statuslbl);
-            Controls.Add(Pricelbl);
-            Controls.Add(Quantitylbl);
-            Controls.Add(brandlbl);
-            Controls.Add(catlbl);
-            Controls.Add(PNamelbl);
-            Controls.Add(pIdlbl);
-            Controls.Add(productlbl);
+            Controls.Add(filterCBox);
+            Controls.Add(txtsearch);
+            Controls.Add(searchBtn);
+            Controls.Add(customerlbl);
             Controls.Add(logo);
+            Controls.Add(backBtn);
+            Controls.Add(dgProductlist);
             Name = "Product";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Product Dashboard";
-            Load += Product_Load;
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgProductList).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgProductlist).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-
-
         #endregion
 
-        private PictureBox logo;
-        private Label productlbl;
-        private Label pIdlbl;
-        private Label PNamelbl;
-        private Label catlbl;
-        private Label brandlbl;
-        private Label Quantitylbl;
-        private Label Pricelbl;
-        private Label Statuslbl;
-        private TextBox txtPId;
-        private TextBox txtPName;
-        private TextBox txtBrand;
-        private ComboBox catCBox;
-        private TextBox txtQuantity;
-        private TextBox txrPrice;
-        private ComboBox StatCBox;
-        private Label plistlbl;
-        private Button Addbtn;
-        private Button updateBtn;
         private Button deleteBtn;
-        private Button backBtn;
-        private DataGridView dgProductList;
-        private Label searchlbl;
+        private Button updateBtn;
+        private Button Addbtn;
+        private ComboBox filterCBox;
         private TextBox txtsearch;
+        private Button searchBtn;
+        private Label customerlbl;
+        private PictureBox logo;
+        private Button backBtn;
+        private DataGridView dgProductlist;
     }
 }

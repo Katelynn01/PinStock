@@ -38,6 +38,7 @@
             clistlbl = new Label();
             dataGridView2 = new DataGridView();
             backBtn = new Button();
+            logBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgpListarchive).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -134,12 +135,23 @@
             backBtn.UseVisualStyleBackColor = true;
             backBtn.Click += backBtn_Click;
             // 
+            // logBtn
+            // 
+            logBtn.Location = new Point(659, 26);
+            logBtn.Name = "logBtn";
+            logBtn.Size = new Size(91, 27);
+            logBtn.TabIndex = 27;
+            logBtn.Text = "Log";
+            logBtn.UseVisualStyleBackColor = true;
+            logBtn.Click += button1_Click;
+            // 
             // Archive
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             ClientSize = new Size(800, 533);
+            Controls.Add(logBtn);
             Controls.Add(clistlbl);
             Controls.Add(dataGridView2);
             Controls.Add(olistlbl);
@@ -171,5 +183,6 @@
         private Label clistlbl;
         private DataGridView dataGridView2;
         private Button backBtn;
+        private Button logBtn;
     }
 }

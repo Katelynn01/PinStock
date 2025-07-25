@@ -45,7 +45,9 @@ namespace PinStock
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure you want to delete this customer?", "Confirm Deletion",MessageBoxButtons.YesNo);
+            MessageBox.Show("Are you sure you want to delete this customer?", "Confirm Deletion", MessageBoxButtons.YesNo);
         }
+
+        
     }
 }

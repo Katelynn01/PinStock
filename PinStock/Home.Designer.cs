@@ -180,9 +180,10 @@ namespace PinStock
             Controls.Add(productlogo);
             Controls.Add(pinstocklbl);
             Controls.Add(logo);
+            MaximizeBox = false;
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " ";
+            Text = "Home Dashboard";
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)productlogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)orderlogo).EndInit();

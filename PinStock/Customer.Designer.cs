@@ -160,9 +160,11 @@ namespace PinStock
             Controls.Add(logo);
             Controls.Add(backBtn);
             Controls.Add(dataGridView1);
+            MaximizeBox = false;
             Name = "Customer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Customer Dashboard";
+            Load += Customer_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ResumeLayout(false);

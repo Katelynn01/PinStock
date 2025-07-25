@@ -167,6 +167,7 @@ namespace PinStock
             deleteBtn.TabIndex = 27;
             deleteBtn.Text = "Delete";
             deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // updateBtn
             // 
@@ -176,6 +177,7 @@ namespace PinStock
             updateBtn.TabIndex = 26;
             updateBtn.Text = "Update";
             updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.Click += updateBtn_Click;
             // 
             // Addbtn
             // 
@@ -185,6 +187,7 @@ namespace PinStock
             Addbtn.TabIndex = 25;
             Addbtn.Text = "Add";
             Addbtn.UseVisualStyleBackColor = true;
+            Addbtn.Click += Addbtn_Click;
             // 
             // backBtn
             // 

@@ -17,80 +17,31 @@ namespace PinStock
             InitializeComponent();
         }
 
+
+        private void Addbtn_Click(object sender, EventArgs e)
+        {
+            AddProduct obj = new AddProduct();
+            obj.Show();
+            this.Hide();
+        }
+
+
         private void backBtn_Click(object sender, EventArgs e)
         {
             Home obj = new Home();
             obj.Show();
             this.Hide();
         }
-
-        private void Addbtn_Click(object sender, EventArgs e)
-        {
-            string productName = txtPName.Text;
-            string productBrand = txtBrand.Text;
-            string productCategory = catCBox.Text;
-            string productPrice = txrPrice.Text;
-            string productQuantity = txtQuantity.Text;
-            string productStatus = StatCBox.Text;
-
-            if (string.IsNullOrEmpty(productName) || string.IsNullOrEmpty(productBrand) ||
-                string.IsNullOrEmpty(productCategory) || string.IsNullOrEmpty(productPrice) ||
-                string.IsNullOrEmpty(productQuantity) || string.IsNullOrEmpty(productStatus))
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
-            else
-            {
-                MessageBox.Show("Product Added Successfully!");
-                txtPName.Clear();
-                txtBrand.Clear();
-                catCBox.SelectedIndex = -1;
-                txrPrice.Clear();
-                txtQuantity.Clear();
-                StatCBox.SelectedIndex = -1;
-
-            }
-
-        }
-
         private void updateBtn_Click(object sender, EventArgs e)
         {
-
-
-        }
-
-        private void deleteBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void archiveBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Product_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void backBtn_Click_1(object sender, EventArgs e)
-        {
-            Home obj = new Home();
+            AddProduct obj = new AddProduct();
             obj.Show();
             this.Hide();
-
         }
-
-        private void deleteBtn_Click_1(object sender, EventArgs e)
+        private void deleteBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure you want to delete this product?", "Confirm deletion", MessageBoxButtons.YesNo );
+            MessageBox.Show("Are you sure you want to delete this product?", "Confirm Deletion", MessageBoxButtons.YesNo);
         }
-    }
+
+    } 
 }
